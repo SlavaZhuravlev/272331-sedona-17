@@ -1,7 +1,7 @@
 body {
   min-width: $mobile-width;
-  @include center-mp();
-  @include normal-font();
+  @include center-mp;
+  @include normal-font;
 }
 
 html {
