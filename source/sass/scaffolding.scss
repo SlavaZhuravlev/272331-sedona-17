@@ -1,5 +1,6 @@
 body {
   min-width: $mobile-width;
+
   @include center-mp;
   @include normal-font;
 }
@@ -8,7 +9,9 @@ html {
   box-sizing: border-box;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 

@@ -22,6 +22,7 @@
 .photo__head {
   margin: 0;
   margin-bottom: 30px;
+
   @include normal-font(18px, 26px, bold);
   color: $black;
   text-align: center;
@@ -32,6 +33,7 @@
   padding-bottom: 30px;
   padding-right: 25px;
   padding-left: 25px;
+
   @include normal-font(14px, 24px);
   color: $dark;
   text-align: center;
@@ -41,6 +43,7 @@
 .photo__item {
   display: flex;
   flex-direction: column;
+
   @include list;
 }
 
@@ -55,6 +58,7 @@
   margin: 0;
   margin-top: 13px;
   margin-bottom: 5px;
+
   @include normal-font(14px, 24px, bold);
   color: $black;
 }
@@ -62,6 +66,7 @@
 .photo__text {
   margin: 0;
   margin-bottom: 5px;
+
   @include normal-font(14px, 24px);
   color: $dark;
 }
@@ -71,6 +76,7 @@
   margin: 0;
   padding-top: 3px;
   padding-left: 35px;
+
   @include normal-font(14px, 24px, bold);
 
   &::before {

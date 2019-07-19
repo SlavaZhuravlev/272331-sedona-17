@@ -76,6 +76,7 @@
 .main-nav__list a {
   display: block;
   padding: 8px;
+
   @include normal-font(18px, 40px, bold);
 
   text-decoration: none;
@@ -87,7 +88,6 @@
 }
 
 .main-nav__list a[href] {
-
   &:active {
     opacity: 0.3;
   }
@@ -95,12 +95,11 @@
 
 
 @media (max-width: $mobile-width-only) {
-
   .main-nav--closed .main-nav__item {
     display: none;
 
     &--active {
-    display: block;
+      display: block;
     }
   }
 
@@ -116,7 +115,6 @@
     display: block;
   }
 }
-
 
 // @media (min-width: $tablet-width) {
 

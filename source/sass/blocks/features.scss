@@ -27,6 +27,7 @@
 
 .features__head {
   margin: 0;
+
   @include normal-font(18px, 26px, bold);
 }
 
@@ -34,10 +35,12 @@
   margin: 0;
   margin-top: 10px;
   margin-bottom: 16px;
+
   @include normal-font(14px, 21px);
 }
 
 .features__text {
   margin: 0;
+
   @include normal-font(14px, 21px);
 }

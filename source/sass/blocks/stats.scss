@@ -21,6 +21,7 @@
   margin: 0;
   margin-bottom: 30px;
   padding: 0 32px;
+
   @include normal-font(18px, 26px, bold);
   color: $black;
 }
@@ -29,6 +30,7 @@
   margin: 0;
   padding: 0 34px;
   padding-bottom: 45px;
+
   @include normal-font(14px, 26px);
   color: $dark;
   background: url("../img/bg-intro-triangle-mobile-blue.svg") no-repeat 50% 100%;
