@@ -1,0 +1,91 @@
+.photo {
+  width: $mobile-width;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+.photo__img {
+  min-height: 160px;
+  margin-top: -30px;
+  margin-bottom: 40px;
+  padding-top: 50px;
+  background:
+    url("../img/bg-intro-triangle-mobile.svg") no-repeat 50% bottom,
+    url("../img/bg-back-mobile@1x.jpg") no-repeat 60% 90%;
+}
+
+.photo__img img {
+  display: block;
+  margin: 0 auto;
+}
+
+.photo__head {
+  margin: 0;
+  margin-bottom: 30px;
+
+  @include normal-font(18px, 26px, bold);
+  color: $black;
+  text-align: center;
+}
+
+.photo__title {
+  margin: 0;
+  padding-bottom: 30px;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  @include normal-font(14px, 24px);
+  color: $dark;
+  text-align: center;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.photo__item {
+  display: flex;
+  flex-direction: column;
+
+  @include list;
+}
+
+.photo__list {
+  margin: 0 auto;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #e5e5e5;
+}
+
+.photo__caption {
+  margin: 0;
+  margin-top: 13px;
+  margin-bottom: 5px;
+
+  @include normal-font(14px, 24px, bold);
+  color: $black;
+}
+
+.photo__text {
+  margin: 0;
+  margin-bottom: 5px;
+
+  @include normal-font(14px, 24px);
+  color: $dark;
+}
+
+.photo__like {
+  position: relative;
+  margin: 0;
+  padding-top: 3px;
+  padding-left: 35px;
+
+  @include normal-font(14px, 24px, bold);
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 23px;
+    height: 23px;
+    background: url("../img/icon-like.svg") no-repeat 0 0;
+  }
+}

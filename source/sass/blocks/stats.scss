@@ -1,0 +1,37 @@
+.stats {
+  width: $mobile-width;
+  margin: 0 auto;
+  text-align: center;
+  background: url("../img/bg-intro-triangle-mobile.svg") no-repeat 50% bottom;
+}
+
+.stats__img {
+  width: $mobile-width;
+  margin: 0 auto;
+  padding-top: 89px;
+  padding-bottom: 85px;
+  margin-top: -30px;
+  margin-bottom: 35px;
+  background:
+    url("../img/bg-intro-triangle-mobile.svg") no-repeat 50% 363px,
+    url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0;
+}
+
+.stats__head {
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0 32px;
+
+  @include normal-font(18px, 26px, bold);
+  color: $black;
+}
+
+.stats__intro {
+  margin: 0;
+  padding: 0 34px;
+  padding-bottom: 45px;
+
+  @include normal-font(14px, 26px);
+  color: $dark;
+  background: url("../img/bg-intro-triangle-mobile-blue.svg") no-repeat 50% 100%;
+}

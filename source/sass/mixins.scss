@@ -1,0 +1,19 @@
+@mixin normal-font($font-size: 14px, $line-height: 21px, $font-weight: normal) {
+  font-size: $font-size;
+  line-height: $line-height;
+  font-weight: $font-weight;
+  font-family: "PT Sans", "Arial", sans-serif;
+  text-transform: uppercase;
+  font-style: normal;
+}
+
+@mixin list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin center-mp {
+  margin: 0;
+  padding: 0;
+}
