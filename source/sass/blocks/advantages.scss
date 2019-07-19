@@ -1,0 +1,63 @@
+.advantages {
+  position: relative;
+  width: $mobile-width;
+  margin: 0 auto;
+}
+
+.advantages__stats {
+  padding: 35px 25px 40px;
+  text-align: center;
+  color: $white;
+  background-color: $bg-blue;
+}
+
+.advantages__head {
+  margin: 0;
+  @include normal-font(18px, 26px, bold);
+}
+
+.advantages__number {
+  margin: 10px;
+  margin-bottom: 13px;
+  @include normal-font(14px, 21px);
+}
+
+.advantages__item {
+  margin: 0;
+  @include normal-font(14px, 21px);
+}
+
+.advantages__slider {
+  padding: 0 20px;
+}
+
+.advantages__title {
+  margin: 0;
+  padding-top: 30px;
+  padding-bottom: 15px;
+  padding-left: 50px;
+  @include normal-font(18px, 26px, bold);
+  color: $black;
+}
+
+.advantages__title--house {
+  background: url("../img/icon-house.svg") no-repeat 3px 19px;
+  background-size: 39px 37px;
+}
+
+.advantages__title--souvenir {
+  background: url("../img/icon-gift.svg") no-repeat 7px 17px;
+  background-size: 32px 38px;
+}
+
+.advantages__title--food {
+  background: url("../img/icon-burger.svg") no-repeat 0 20px;
+  background-size: 40px 35px;
+}
+
+.advantages__intro {
+  margin: 0;
+  margin-left: 50px;
+  @include normal-font(14px, 21px);
+  color: $dark;
+}

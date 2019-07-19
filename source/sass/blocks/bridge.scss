@@ -1,0 +1,29 @@
+.bridge {
+  width: $mobile-width;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.bridge__stats {
+  margin-top: 30px;
+  padding: 30px 25px 37px;
+  color: $white;
+  background-color: $bg-blue;
+}
+
+.bridge__head {
+  margin: 0;
+  @include normal-font(18px, 26px, bold)
+}
+
+.bridge__number {
+  margin: 0;
+  margin-top: 8px;
+  margin-bottom: 15px;
+  @include normal-font(14px, 21px);
+}
+
+.bridge__item {
+  margin: 0;
+  @include normal-font(14px, 21px);
+}
