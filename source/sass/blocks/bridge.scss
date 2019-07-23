@@ -1,4 +1,6 @@
 .bridge {
+  display: flex;
+  flex-direction: column;
   width: $mobile-width;
   margin: 0 auto;
   text-align: center;
@@ -14,7 +16,7 @@
 .bridge__head {
   margin: 0;
 
-  @include normal-font (18px, 26px, bold);
+  @include normal-font (21px, 26px, bold);
 }
 
 .bridge__number {
@@ -29,4 +31,28 @@
   margin: 0;
 
   @include normal-font (14px, 21px);
+}
+
+@media (min-width: $tablet-width) {
+  .bridge {
+    flex-direction: row;
+    width: $tablet-width;
+  }
+
+  .bridge img {
+    width: 67%;
+    height: 260px;
+  }
+
+  .bridge__stats {
+    align-items: flex-start;
+    order: 1;
+    margin: 0;
+    width: 33%;
+    min-height: 260px;
+  }
+
+  .bridge__head {
+    @include normal-font(21px, 26px, bold);
+  }
 }
