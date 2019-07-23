@@ -12,6 +12,9 @@
 }
 
 .features__list {
+  display: flex;
+  flex-direction: column;
+
   @include list;
   color: $dark;
 }
@@ -43,4 +46,25 @@
   margin: 0;
 
   @include normal-font(14px, 21px);
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    width: $tablet-width;
+  }
+
+  .features__list {
+    flex-direction: row;
+  }
+
+  .features__item {
+    padding-top: 45px;
+    border: none;
+  }
+
+  .features__head {
+    padding: 0 30px;
+
+    @include normal-font(21px, 26px, bold);
+  }
 }
