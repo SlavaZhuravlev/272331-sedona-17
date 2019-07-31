@@ -1,0 +1,73 @@
+.review-form fieldset:nth-child(2) {
+  order: -1;
+}
+
+.review-form fieldset {
+  @include center-mp;
+  padding: 0 20px;
+  border: none;
+  border-bottom: 2px solid #e5e5e5;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.review-form legend {
+  margin: 0;
+  padding-top: 20px;
+
+  @include normal-font(18px, 26px, bold);
+  color: $black;
+}
+
+@media (min-width: $tablet-width) {
+  .review-form {
+    padding: 0 60px;
+  }
+
+  .review-form fieldset {
+    padding: 0;
+    border: none;
+  }
+
+  .review-form fieldset:nth-child(2) {
+    order: 0;
+  }
+
+  .review-form legend {
+    @include normal-font(21px, 26px, bold);
+  }
+
+  .form-contacts__head,
+  .form-visiting__head,
+  .form-emotions__head {
+    display: flex;
+    align-items: center;
+    width: 648px;
+
+    &::before,
+    &::after {
+      content: "";
+      flex-grow: 1;
+      flex-shrink: 0;
+      width: 125px;
+      height: 1px;
+      background-color: #dbdbdb;
+    }
+
+    &::before {
+      margin-right: 60px;
+    }
+
+    &::after {
+      margin-left: 60px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .review-form {
+    padding: 0 120px;
+  }
+}

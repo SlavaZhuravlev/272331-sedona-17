@@ -9,7 +9,8 @@
   margin-bottom: 35px;
   padding-top: 50px;
   background:
-    url("../img/bg-intro-triangle-mobile.svg") no-repeat 50% bottom,
+    $bg-blue,
+    url("../img/bg-intro-triangle-mobile.svg") no-repeat 50% 100%,
     url("../img/bg-back-mobile@1x.jpg") no-repeat 60% 90%;
 }
 
@@ -37,318 +38,42 @@
   border-bottom: 2px solid #e5e5e5;
 }
 
-.review__form fieldset {
-  @include center-mp;
-  padding: 0 20px;
-  border: none;
-  border-bottom: 2px solid #e5e5e5;
+@media (min-width: $tablet-width) {
+  .review {
+    width: $tablet-width;
+  }
+
+  .review__img {
+    height: 290px;
+    background:
+      url("../img/bg-intro-triangle-tablet.svg") no-repeat 50% 100%,
+      url("../img/bg-back-tablet@1x.jpg") no-repeat 60% 100%;
+  }
+
+  .review__head {
+    @include normal-font(30px, 26px, bold);
+  }
+
+  .review__title {
+    margin-bottom: 75px;
+    padding: 0 165px;
+    border: none;
+  }
 }
 
-.review__form fieldset:last-child {
-  border: none;
-}
+@media (min-width: $desktop-width) {
+  .review {
+    width: $desktop-width;
+  }
 
-.review__form legend {
-  margin: 0;
-  padding-top: 20px;
+  .review__img {
+    height: 305px;
+    background:
+      url("../img/bg-intro-triangle-desktop.svg") no-repeat 50% 100%,
+      url("../img/bg-back-desktop@1x.jpg") no-repeat 50% 100%;
+  }
 
-  @include normal-font(18px, 26px, bold);
-  color: $black;
-  text-align: center;
-}
-
-.review__perform {
-  padding-bottom: 20px;
-}
-
-.review__item {
-  display: flex;
-  justify-content: space-between;
-  width: 280px;
-  margin: 0;
-  margin-bottom: 20px;
-}
-
-.review__item label {
-  align-self: center;
-  margin-right: 15px;
-
-  @include normal-font(14px, 26px);
-  color: $dark;
-}
-
-.review__item input {
-  margin: 0;
-  padding-top: 15px;
-  padding-bottom: 15px;
-  padding-left: 20px;
-
-  @include normal-font(18px, 26px, bold);
-  color: $black;
-  text-transform: none;
-  background-color: #f2f2f2;
-  border: none;
-}
-
-.review__item input::placeholder {
-  color: $black;
-}
-
-.review__name {
-  min-width: 230px;
-}
-
-.review__fulname {
-  min-width: 190px;
-}
-
-.review__contacts {
-  padding-bottom: 20px;
-}
-
-.review__item--contact {
-  flex-direction: column;
-  justify-content: flex-start;
-}
-
-.review__item--contact label {
-  margin-bottom: 10px;
-}
-
-.review__item--contact input {
-  width: 280px;
-}
-
-.review__phone {
-  background-image: url("../img/icon-phone.svg");
-  background-repeat: no-repeat;
-  background-position: 240px center;
-}
-
-.review__mail {
-  background-image: url("../img/icon-mail.svg");
-  background-repeat: no-repeat;
-  background-position: 240px center;
-}
-
-.review__impression {
-  padding-bottom: 25px;
-}
-
-.review__list {
-  @include list;
-  @include normal-font(18px, 26px, bold);
-  text-transform: none;
-}
-
-.review__option {
-  padding-bottom: 45px;
-  padding-left: 80px;
-}
-
-.review__option label {
-  position: relative;
-  display: block;
-  cursor: pointer;
-  user-select: none;
-}
-
-.review__input--radio + label::before {
-  content: "";
-  position: absolute;
-  left: -68px;
-  top: -14px;
-  width: 55px;
-  height: 55px;
-  background-color: #f2f2f2;
-  border-radius: 50%;
-}
-
-.review__input--radio:hover + label::before,
-.review__input--radio:focus + label::before {
-  background-color: #e5e5e5;
-}
-
-.review__input--radio:active + label::before {
-  background-color: #d5d5d5;
-}
-
-.review__input--radio:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: -50px;
-  width: 20px;
-  height: 20px;
-  background-color: $dark;
-  border-radius: 50%;
-}
-
-.review__input--radio:checked:active + label::after {
-  opacity: 0.3;
-}
-
-.review__visiting {
-  padding-bottom: 25px;
-}
-
-.review__input--checkbox + label::before {
-  content: "";
-  position: absolute;
-  left: -68px;
-  top: -14px;
-  width: 55px;
-  height: 55px;
-  background-color: #f2f2f2;
-  border-radius: 10%;
-}
-
-.review__input--checkbox:hover + label::before,
-.review__input--checkbox:focus + label::before {
-  background-color: #e5e5e5;
-}
-
-.review__input--checkbox:active + label::before {
-  background-color: #d5d5d5;
-}
-
-.review__input--checkbox:checked + label::after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: -50px;
-  width: 20px;
-  height: 20px;
-  background-image: url("../img/icon-tick.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-}
-
-.review__input--checkbox:checked:active + label::after {
-  opacity: 0.3;
-}
-
-.review__emotions {
-  padding-bottom: 20px;
-}
-
-.review__write textarea {
-  min-width: 280px;
-  min-height: 170px;
-  margin-bottom: 50px;
-  padding-top: 15px;
-  padding-left: 20px;
-  background-color: #f2f2f2;
-  border: none;
-}
-
-.review__write textarea::placeholder {
-  @include normal-font(18px, 26px, bold);
-  color: $black;
-  text-transform: none;
-}
-
-.review__btn {
-  display: block;
-  width: 280px;
-  min-height: 60px;
-  margin-bottom: 75px;
-
-  @include normal-font(21px, 26px, bold);
-  color: $white;
-  background-color: $bg-blue;
-  border: none;
-  cursor: pointer;
-}
-
-.review__btn:hover,
-.review__btn:active {
-  background-color: #669ec0;
-}
-
-.review__btn:active {
-  color: rgba(255, 255, 255, 0.3);
-  background-color: #5496bd;
-}
-
-.modal {
-  width: 320px;
-  margin: 0 auto;
-  padding: 0 20px;
-  box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.15);
-}
-
-.modal-error {
-  min-height: 280px;
-  padding: 40px 55px 35px;
-}
-
-.modal-error__head {
-  margin: 0;
-  margin-bottom: 15px;
-
-  @include normal-font(18px, 26px, bold);
-  color: $black;
-  text-align: center;
-}
-
-.modal-error__text {
-  margin: 0;
-  margin-bottom: 18px;
-
-  @include normal-font(14px, 24px);
-  color: $dark;
-  text-align: center;
-}
-
-.modal-error__exit {
-  display: block;
-  width: 180px;
-  min-height: 60px;
-  margin: 0 auto;
-
-  @include normal-font(18px, 26px, bold);
-  color: $white;
-  background-color: $bg-blue;
-  border: none;
-  cursor: pointer;
-}
-
-.modal-review {
-  min-height: 325px;
-  padding-top: 40px 20px;
-  padding-bottom: 20px;
-}
-
-.modal-review__head {
-  margin: 0;
-  margin-bottom: 15px;
-
-  @include normal-font(18px, 26px, bold);
-  color: $black;
-  text-align: center;
-}
-
-.modal-review__text {
-  margin: 0;
-  margin-bottom: 48px;
-  padding-right: 53px;
-  padding-left: 53px;
-
-  @include normal-font(14px, 24px);
-  color: $dark;
-  text-align: center;
-}
-
-.modal-review__exit {
-  display: block;
-  width: 280px;
-  min-height: 60px;
-  margin: 0 auto;
-
-  @include normal-font(18px, 26px, bold);
-  color: $white;
-  background-color: $bg-blue;
-  border: none;
-  cursor: pointer;
+  .review__title {
+    padding: 0 380px;
+  }
 }

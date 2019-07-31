@@ -1,0 +1,62 @@
+.form-perform {
+  width: 280px;
+}
+
+.form-perform__head {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.form-perform__item {
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.form-perform__item label {
+  align-self: center;
+  margin-right: 15px;
+
+  @include normal-font(14px, 26px);
+  color: $dark;
+}
+
+.form-perform__item input {
+  margin: 0;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-left: 20px;
+
+  @include normal-font(18px, 26px, bold);
+  color: $black;
+  text-transform: none;
+  background-color: #f2f2f2;
+  border: none;
+}
+
+.form-perform__item input::placeholder {
+  color: $black;
+}
+
+.form-perform__item input:focus::placeholder {
+  color: transparent;
+}
+
+.form-perform__name {
+  min-width: 230px;
+}
+
+.form-perform__fulname {
+  min-width: 190px;
+}
+
+@media (min-width: $tablet-width) {
+  .form-perform {
+    width: 300px;
+  }
+
+  .form-perform__head {
+    text-align: start;
+  }
+}

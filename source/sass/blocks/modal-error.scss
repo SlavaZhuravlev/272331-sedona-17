@@ -1,0 +1,39 @@
+.modal-error {
+  display: none;
+  min-height: 280px;
+  width: $mobile-width;
+  margin: 0 auto;
+  padding: 40px 55px 35px;
+  box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.15);
+}
+
+.modal-error__head {
+  margin: 0;
+  margin-bottom: 15px;
+
+  @include normal-font(18px, 26px, bold);
+  color: $black;
+  text-align: center;
+}
+
+.modal-error__text {
+  margin: 0;
+  margin-bottom: 18px;
+
+  @include normal-font(14px, 24px);
+  color: $dark;
+  text-align: center;
+}
+
+.modal-error__exit {
+  display: block;
+  width: 180px;
+  min-height: 60px;
+  margin: 0 auto;
+
+  @include normal-font(18px, 26px, bold);
+  color: $white;
+  background-color: $bg-blue;
+  border: none;
+  cursor: pointer;
+}
