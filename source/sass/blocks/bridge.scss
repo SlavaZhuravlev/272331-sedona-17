@@ -16,7 +16,7 @@
 .bridge__head {
   margin: 0;
 
-  @include normal-font (21px, 26px, bold);
+  @include normal-font (18px, 26px, bold);
 }
 
 .bridge__number {
@@ -54,5 +54,11 @@
 
   .bridge__head {
     @include normal-font(21px, 26px, bold);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .bridge {
+    width: $desktop-width;
   }
 }

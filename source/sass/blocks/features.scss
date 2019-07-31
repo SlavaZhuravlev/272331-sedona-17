@@ -68,3 +68,9 @@
     @include normal-font(21px, 26px, bold);
   }
 }
+
+@media (min-width: $desktop-width) {
+  .features {
+    width: $desktop-width;
+  }
+}

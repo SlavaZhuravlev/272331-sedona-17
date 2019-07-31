@@ -13,6 +13,7 @@
   margin-top: -30px;
   margin-bottom: 35px;
   background:
+    $bg-blue,
     url("../img/bg-intro-triangle-mobile.svg") no-repeat 50% 363px,
     url("../img/bg-back-mobile@1x.jpg") no-repeat 50% 0;
 }
@@ -52,5 +53,18 @@
   .stats__head {
     margin-bottom: 35px;
     padding: 0 135px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .stats {
+    width: $desktop-width;
+  }
+
+  .stats__img {
+    width: $desktop-width;
+    background:
+      url("../img/bg-intro-triangle-desktop.svg") no-repeat 50% 100%,
+      url("../img/bg-back-desktop@1x.jpg") no-repeat 50% 0;
   }
 }

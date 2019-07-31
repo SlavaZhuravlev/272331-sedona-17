@@ -1,0 +1,71 @@
+.form-impression__head {
+  padding-bottom: 25px;
+  text-align: center;
+}
+
+.form-impression__list {
+  display: flex;
+  flex-direction: column;
+
+  @include list;
+  @include normal-font(18px, 26px, bold);
+  text-transform: none;
+}
+
+.form-impression__option {
+  padding-bottom: 45px;
+  padding-left: 80px;
+}
+
+.form-impression__option label {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  user-select: none;
+}
+
+.form-impression__input + label::before {
+  content: "";
+  position: absolute;
+  left: -68px;
+  top: -14px;
+  width: 55px;
+  height: 55px;
+  background-color: #f2f2f2;
+  border-radius: 50%;
+}
+
+.form-impression__input:hover + label::before,
+.form-impression__input:focus + label::before {
+  background-color: #e5e5e5;
+}
+
+.form-impression__input:active + label::before {
+  background-color: #d5d5d5;
+}
+
+.form-impression__input:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: -50px;
+  width: 20px;
+  height: 20px;
+  background-color: $dark;
+  border-radius: 50%;
+}
+
+.form-impression__input:checked:active + label::after {
+  opacity: 0.3;
+}
+
+@media (min-width: $tablet-width) {
+  .form-impression__list {
+    width: 275px;
+    text-align: start;
+  }
+
+  .form-impression__option {
+    padding-left: 70px;
+  }
+}

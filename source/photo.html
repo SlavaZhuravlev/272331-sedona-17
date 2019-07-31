@@ -19,11 +19,11 @@
           <li class="main-nav__item">
             <a href="index.html">Главная</a>
           </li>
-          <li class="main-nav__item main-nav__item--active">
+          <li class="main-nav__item">
             <a>Фото и видео</a>
           </li>
           <li class="main-nav__item">
-            <a href="form.html">Форма и отзывы</a>
+            <a href="form.html">Форма отзыва</a>
           </li>
           <li class="main-nav__item">
             <a href="#">HTML Academy</a>
@@ -42,29 +42,37 @@
       <h2 class="photo__head">Фото и видео</h2>
       <h3 class="photo__title">Не можете решиться на путешествие из-за курса? Фотографии помогуть вам забыть о политике и экономике.</h3>
         <ul class="photo__list">
-          <li class="photo__item">
+          <li class="photo__item photo__item--first">
             <a href="#"><img src="img/photo-sunset-mobile@1x.jpg" width="280" height="280" alt="Фото «Неродные просторы»"></a>
-            <h4 class="photo__caption">Неродные просторы</h4>
-            <p class="photo__text">Автор фото: Борис</p>
-            <b class="photo__like">1350</b>
+            <div class="photo__wrapper photo__wrapper--first">
+              <h4 class="photo__caption">Неродные просторы</h4>
+              <p class="photo__text">Автор фото: Борис</p>
+              <b class="photo__like">1350</b>
+            </div>
           </li>
           <li class="photo__item">
             <a href="#"><img src="img/photo-cactus-mobile@1x.jpg" width="280" height="280" alt="Фото «Местная растительность»"></a>
-            <h4 class="photo__caption">Местная растительность</h4>
-            <p class="photo__text">Автор фото: Сергей</p>
-            <b class="photo__like">143</b>
+            <div class="photo__wrapper">
+              <h4 class="photo__caption">Местная растительность</h4>
+              <p class="photo__text">Автор фото: Сергей</p>
+              <b class="photo__like">143</b>
+            </div>
           </li>
           <li class="photo__item">
             <a href="#"><img src="img/photo-roads-mobile@1x.jpg" width="280" height="280" alt="Фото «Дорога на север»"></a>
-            <h4 class="photo__caption">Дорога на север</h4>
-            <p class="photo__text">Автор фото: Петр</p>
-            <b class="photo__like">96</b>
+            <div class="photo__wrapper">
+              <h4 class="photo__caption">Дорога на север</h4>
+              <p class="photo__text">Автор фото: Петр</p>
+              <b class="photo__like">96</b>
+            </div>
           </li>
           <li class="photo__item">
             <a href="#"><img src="img/photo-bridge-mobile@1x.jpg" width="280" height="280" alt="Фото «Мост дьявола»"></a>
-            <h4 class="photo__caption">Мост дьявола</h4>
-            <p class="photo__text">Автор фото: Антон</p>
-            <b class="photo__like">254</b>
+            <div class="photo__wrapper">
+              <h4 class="photo__caption">Мост дьявола</h4>
+              <p class="photo__text">Автор фото: Антон</p>
+              <b class="photo__like">254</b>
+            </div>
           </li>
         </ul>
       </section>
@@ -116,6 +124,8 @@
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive"><span class="visually-hidden">htmlacademy.ru</span></a>
       </div>
     </footer>
+
+    <script src="js/script-photo.js"></script>
 
   </body>
 </html>
