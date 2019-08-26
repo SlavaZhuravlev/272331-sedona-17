@@ -5,10 +5,11 @@
 }
 
 .page-header__logo {
+  order: 2;
   width: 102px;
   height: 83px;
   margin: 0 auto;
-  order: 2;
+  z-index: 30;
 }
 
 .main-nav {
@@ -97,7 +98,6 @@
     background-color: #669ec0;
   }
 }
-
 
 @media (max-width: $mobile-width-only) {
   .main-nav--closed .main-nav__list {
@@ -189,5 +189,15 @@
 @media (min-width: $desktop-width) {
   .main-nav {
     width: $desktop-width;
+  }
+
+  .page-header__logo {
+    width: 190px;
+    height: 95px;
+  }
+
+  .page-header__logo img {
+    width: 100%;
+    height: auto;
   }
 }

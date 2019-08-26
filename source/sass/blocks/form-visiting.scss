@@ -1,5 +1,13 @@
+.form-visiting {
+  width: $mobile-width;
+  margin: 0 auto;
+  border: none;
+  border-bottom: 2px solid #e5e5e5;
+}
+
 .form-visiting__head {
-  padding-bottom: 25px;
+  padding-top: 20px;
+  padding-bottom: 27px;
   text-align: center;
 }
 
@@ -13,8 +21,12 @@
 }
 
 .form-visiting__option {
-  padding-bottom: 45px;
+  padding-bottom: 55px;
   padding-left: 80px;
+
+  &:last-child {
+    padding-bottom: 40px;
+  }
 }
 
 .form-visiting__option label {
@@ -27,8 +39,8 @@
 .form-visiting__input + label::before {
   content: "";
   position: absolute;
-  left: -68px;
-  top: -14px;
+  left: -80px;
+  top: -10px;
   width: 55px;
   height: 55px;
   background-color: #f2f2f2;
@@ -47,10 +59,10 @@
 .form-visiting__input:checked + label::after {
   content: "";
   position: absolute;
-  top: 3px;
-  left: -50px;
-  width: 20px;
-  height: 20px;
+  top: 6px;
+  left: -62px;
+  width: 25px;
+  height: 25px;
   background-image: url("../img/icon-tick.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
@@ -61,23 +73,51 @@
 }
 
 @media (min-width: $tablet-width) {
+  .form-visiting {
+    width: 648px;
+    border: none;
+  }
+
+  .form-visiting__head {
+    padding-top: 5px;
+  }
+
   .form-visiting__list {
     flex-direction: row;
     justify-content: space-between;
     flex-wrap: wrap;
-    width: 460px;
+    width: 470px;
     margin: 0 auto;
+    margin-top: 30px;
     padding: 0;
   }
 
   .form-visiting__option {
     width: 210px;
     text-align: left;
+    margin-bottom: 10px;
+  }
+
+  .form-visiting__option label {
+    margin-left: 5px;
   }
 }
 
 @media (min-width: $desktop-width) {
+  .form-visiting__head {
+    padding-top: 3px;
+    padding-bottom: 25px;
+  }
+
   .form-visiting__list {
     width: 960px;
+  }
+
+  .form-visiting__option {
+    width: 205px;
+  }
+
+  .form-visiting__option label {
+    margin: 0;
   }
 }

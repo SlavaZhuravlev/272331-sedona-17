@@ -1,18 +1,12 @@
 .form-wrapper {
   display: flex;
   flex-direction: column;
+  order: -1;
 }
 
 @media (min-width: $tablet-width) {
   .form-wrapper {
     flex-direction: row;
     justify-content: space-between;
-    width: 648px;
-  }
-}
-
-@media (min-width: $desktop-width) {
-  .form-wrapper {
-    width: 960px;
   }
 }

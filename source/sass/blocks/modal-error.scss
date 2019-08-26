@@ -1,9 +1,12 @@
 .modal-error {
   display: none;
-  min-height: 280px;
+  position: fixed;
+  top: 20%;
+  left: 0;
   width: $mobile-width;
-  margin: 0 auto;
+  min-height: 280px;
   padding: 40px 55px 35px;
+  background-color: $white;
   box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.15);
 }
 
@@ -36,4 +39,37 @@
   background-color: $bg-blue;
   border: none;
   cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-error {
+    width: 400px;
+    min-height: 350px;
+    margin-left: 185px;
+    padding-top: 53px;
+    padding-bottom: 50px;
+  }
+
+  .modal-error__head {
+    margin-bottom: 30px;
+    padding: 0 20px;
+
+    @include normal-font(30px, 40px, bold);
+  }
+
+  .modal-error__text {
+    margin-bottom: 35px;
+  }
+
+  .modal-error__exit {
+    width: 273px;
+
+    @include normal-font(21px, 26px, bold);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal-error {
+    margin-left: 400px;
+  }
 }
