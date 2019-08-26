@@ -24,7 +24,7 @@
   width: 280px;
   margin: 0 auto;
   margin-bottom: 50px;
-  padding: 20px;
+  padding: 18px 20px;
 
   @include normal-font(21px, 26px, bold);
   color: $white;
@@ -32,12 +32,32 @@
 }
 
 .contacts__map {
+  position: relative;
   width: $mobile-width;
   height: 350px;
   margin-bottom: 35px;
-  background:
-    url("../img/icon-map-marker.svg") no-repeat 150px 155px,
-    url("../img/bg-map-mobile@1x.jpg") no-repeat;
+  background: url("../img/bg-map-mobile@1x.jpg") no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+    background-size: 320px auto;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 155px;
+    left: 150px;
+    width: 27px;
+    height: 27px;
+    background: url("../img/icon-map-marker.svg") no-repeat 0 0;
+  }
+}
+
+.contacts__interactive {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media (min-width: $tablet-width) {
@@ -46,22 +66,38 @@
   }
 
   .contacts__title {
+    margin-bottom: 30px;
+
     @include normal-font(30px, 26px, bold);
   }
 
   .contacts__text {
+    margin-bottom: 40px;
     padding: 0 161px;
   }
 
   .contacts__search {
     width: 460px;
+    margin-bottom: 60px;
   }
 
   .contacts__map {
     width: $tablet-width;
-    background:
-      url("../img/icon-map-marker.svg") no-repeat 370px 160px,
-      url("../img/bg-map-tablet@1x.jpg") no-repeat;
+    background: url("../img/bg-map-tablet@1x.jpg") no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-tablet@2x.jpg");
+      background-size: 768px auto;
+    }
+
+    &::before {
+      top: 160px;
+      left: 370px;
+    }
+  }
+
+  .contacts__interactive {
+    width: $tablet-width;
   }
 }
 
@@ -70,10 +106,31 @@
     width: $desktop-width;
   }
 
+  .contacts__text {
+    margin-bottom: 45px;
+    padding: 0 370px;
+  }
+
+  .contacts__search {
+    margin-bottom: 65px;
+  }
+
   .contacts__map {
     width: $desktop-width;
-    background:
-      url("../img/icon-map-marker.svg") no-repeat 590px 155px,
-      url("../img/bg-map-desktop@1x.jpg") no-repeat;
+    background: url("../img/bg-map-desktop@1x.jpg") no-repeat;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/bg-map-desktop@2x.jpg");
+      background-size: 1200px auto;
+    }
+
+    &::before {
+      left: 585px;
+      top: 160px;
+    }
+  }
+
+  .contacts__interactive {
+    width: $desktop-width;
   }
 }

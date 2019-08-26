@@ -1,21 +1,15 @@
-.review-form fieldset:nth-child(2) {
-  order: -1;
+.review-form {
+  display: flex;
+  flex-direction: column;
 }
 
 .review-form fieldset {
   @include center-mp;
   padding: 0 20px;
-  border: none;
-  border-bottom: 2px solid #e5e5e5;
-
-  &:last-child {
-    border: none;
-  }
 }
 
 .review-form legend {
   margin: 0;
-  padding-top: 20px;
 
   @include normal-font(18px, 26px, bold);
   color: $black;
@@ -23,16 +17,14 @@
 
 @media (min-width: $tablet-width) {
   .review-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
     padding: 0 60px;
   }
 
   .review-form fieldset {
     padding: 0;
-    border: none;
-  }
-
-  .review-form fieldset:nth-child(2) {
-    order: 0;
   }
 
   .review-form legend {
@@ -69,5 +61,26 @@
 @media (min-width: $desktop-width) {
   .review-form {
     padding: 0 120px;
+  }
+
+  .form-contacts__head,
+  .form-visiting__head,
+  .form-emotions__head {
+    width: 960px;
+
+    &::after,
+    &::before {
+      width: 280px;
+    }
+  }
+
+  .form-visiting__head {
+    &::before {
+      margin-right: 80px;
+    }
+
+    &::after {
+      margin-left: 80px;
+    }
   }
 }

@@ -6,12 +6,39 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="format-detection" content="telephone=no">
     <link href="css/style.css" rel="stylesheet">
+    <script src="js/picturefill.min.js" async></script>
+
+    <!-- <style>
+        body {
+          background-repeat: no-repeat;
+          background-position:  50% 0;
+          background-image: url("pp/sedona-form-mobile.jpg");
+          opacity: 0.5;
+        }
+
+        @media (min-width: 768px) {
+          body {
+            background-image: url("pp/sedona-form-tablet.jpg");
+          }
+        }
+
+        @media (min-width: 1200px) {
+          body {
+            background-image: url("pp/sedona-form-desktop.jpg");
+          }
+        }
+    </style> -->
+
   </head>
   <body>
 
     <header class="page-header">
-      <a class="page-header__logo" href="#">
-        <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Городок «Седона»">
+      <a class="page-header__logo" href="index.html">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img src="img/logo-sedona-mobile.svg" width="102" height="83" alt="Городок «Седона»">
+        </picture>
       </a>
       <nav class="main-nav main-nav--closed main-nav--nojs">
         <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
@@ -26,7 +53,7 @@
               <a>Форма отзыва</a>
             </li>
             <li class="main-nav__item">
-              <a href="#">HTML Academy</a>
+              <a href="https://htmlacademy.ru/">HTML Academy</a>
             </li>
           </ul>
       </nav>
@@ -43,7 +70,6 @@
 
         <form class="review-form" action="https://echo.htmlacademy.ru" method="post">
 
-          <div class="form-wrapper">
             <fieldset class="form-impression">
               <legend class="form-impression__head">Ваше общее впечатление:</legend>
               <ul class="form-impression__list">
@@ -77,18 +103,17 @@
                 <input class="form-perform__fulname" id="review-patronymic" type="text" name="patronymic" placeholder="Александрович">
               </p>
             </fieldset>
-          </div>
 
           <fieldset class="form-contacts">
             <legend class="form-contacts__head">Контактная информация:</legend>
             <div class="form-contacts__wrapper">
               <p class="form-contacts__item form-contacts__item--phone">
-                <label for="review-phone"><span class="form-contacts__item-visually">Контактный</span> телефон*:</label>
-                <input class="form-contacts__phone" id="review-phone" type="tel" name="phone" placeholder="Введите телефон" required>
+                <label class="form-contacts__phone" for="review-phone"><span class="form-contacts__item-visually">Контактный</span> телефон*:</label>
+                <input id="review-phone" type="tel" name="phone" placeholder="Введите телефон" required>
               </p>
               <p class="form-contacts__item form-contacts__item--email">
-                <label for="review-email">Электронная почта*:</label>
-                <input class="form-contacts__mail" id="review-email" type="email" name="email" placeholder="Введите e-mail" required>
+                <label class="form-contacts__mail" for="review-email">Электронная почта*:</label>
+                <input id="review-email" type="email" name="email" placeholder="Введите e-mail" required>
               </p>
             </div>
           </fieldset>
@@ -121,7 +146,7 @@
               <textarea name="message" id="message" rows="5" placeholder="Опишите подробно все свои восторги"></textarea>
             </label>
             <div class="form-emotions__wrapper">
-              <button class="form-emotions__btn" type="submit">Отправить отзыв</button>
+              <button class="form-emotions__btn form-emotions__btn--send" type="button">Отправить отзыв</button>
               <span class="form-emotions__footnote">* — обязательные поля</span>
             </div>
           </fieldset>
@@ -180,7 +205,9 @@
     <section class="modal-review">
       <h2 class="modal-review__head">Ваш отзыв отправлен!</h2>
       <p class="modal-review__text">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-      <button class="modal-review__exit" type="button">Закрыть окно</button>
+      <div class="modal-review__wrapper">
+        <button class="modal-review__exit" type="button">Закрыть окно</button>
+      </div>
     </section>
 
     <script src="js/script-form.js"></script>

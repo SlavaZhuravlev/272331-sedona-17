@@ -1,16 +1,18 @@
 .modal-review {
   display: none;
+  position: fixed;
+  top: 20%;
+  left: 0;
   width: $mobile-width;
   min-height: 325px;
-  margin: 0 auto;
-  padding: 0 20px;
-  padding-bottom: 20px;
+  background-color: $white;
   box-shadow: 0 0 15px 0 rgba(0, 1, 1, 0.15);
 }
 
 .modal-review__head {
   margin: 0;
-  margin-bottom: 15px;
+  margin-top: 40px;
+  margin-bottom: 30px;
 
   @include normal-font(18px, 26px, bold);
   color: $black;
@@ -19,13 +21,21 @@
 
 .modal-review__text {
   margin: 0;
-  margin-bottom: 48px;
-  padding-right: 53px;
-  padding-left: 53px;
+  margin-bottom: 35px;
+  padding-right: 52px;
+  padding-left: 52px;
 
   @include normal-font(14px, 24px);
   color: $dark;
   text-align: center;
+}
+
+.modal-review__wrapper {
+  width: $mobile-width;
+  min-height: 100px;
+  margin-bottom: 0;
+  padding-top: 20px;
+  background-color: #f2f2f2;
 }
 
 .modal-review__exit {
@@ -39,4 +49,42 @@
   background-color: $bg-blue;
   border: none;
   cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .modal-review {
+    width: 640px;
+    min-height: 345px;
+    margin-left: 64px;
+  }
+
+  .modal-review__head {
+    margin-top: 55px;
+    margin-bottom: 30px;
+
+    @include normal-font(30px, 26px, bold);
+  }
+
+  .modal-review__text {
+    margin-bottom: 40px;
+    padding: 0 110px;
+  }
+
+  .modal-review__wrapper {
+    width: 640px;
+    min-height: 146px;
+    padding-top: 44px;
+  }
+
+  .modal-review__exit {
+    width: 458px;
+
+    @include normal-font(21px, 26px, bold);
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .modal-review {
+    margin-left: 280px;
+  }
 }

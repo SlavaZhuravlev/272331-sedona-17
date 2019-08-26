@@ -7,8 +7,7 @@
 }
 
 .bridge__stats {
-  margin-top: 30px;
-  padding: 30px 25px 37px;
+  padding: 30px 25px 25px;
   color: $white;
   background-color: $bg-blue;
 }
@@ -21,13 +20,13 @@
 
 .bridge__number {
   margin: 0;
-  margin-top: 8px;
+  margin-top: 10px;
   margin-bottom: 15px;
 
   @include normal-font (14px, 21px);
 }
 
-.bridge__item {
+.bridge__text {
   margin: 0;
 
   @include normal-font (14px, 21px);
@@ -39,26 +38,49 @@
     width: $tablet-width;
   }
 
-  .bridge img {
-    width: 67%;
-    height: 260px;
+  .bridge__image {
+    width: 512px;
+    height: 256px;
+    vertical-align: bottom;
   }
 
   .bridge__stats {
     align-items: flex-start;
     order: 1;
-    margin: 0;
-    width: 33%;
-    min-height: 260px;
+    padding: 45px;
+    width: 256px;
+    min-height: 256px;
   }
 
   .bridge__head {
     @include normal-font(21px, 26px, bold);
+  }
+
+  .bridge__number {
+    margin-bottom: 20px;
   }
 }
 
 @media (min-width: $desktop-width) {
   .bridge {
     width: $desktop-width;
+  }
+
+  .bridge__stats {
+    width: 400px;
+    padding: 50px 50px 55px;
+    padding-bottom: 0;
+  }
+
+  .bridge__head {
+    padding: 0 30px;
+  }
+
+  .bridge__text {
+    padding: 0 35px;
+  }
+
+  .bridge__image {
+    width: 800px;
   }
 }

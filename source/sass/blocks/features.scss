@@ -1,12 +1,11 @@
 .features {
   width: $mobile-width;
   margin: 0 auto;
+  margin-bottom: 30px;
   text-align: center;
 }
 
 .features__title {
-  margin-top: -6px;
-  margin-bottom: 30px;
   padding: 0 20px;
   background-color: $bg-gray;
 }
@@ -20,7 +19,7 @@
 }
 
 .features__item {
-  padding: 24px 15px;
+  padding: 25px 15px;
   border-bottom: 2px solid #d6d6d6;
 
   &:last-child {
@@ -51,6 +50,12 @@
 @media (min-width: $tablet-width) {
   .features {
     width: $tablet-width;
+    margin-bottom: 55px;
+  }
+
+  .features__title {
+    padding: 0;
+    padding-bottom: 45px;
   }
 
   .features__list {
@@ -58,7 +63,8 @@
   }
 
   .features__item {
-    padding-top: 45px;
+    padding: 0 40px;
+    padding-top: 47px;
     border: none;
   }
 
@@ -67,10 +73,26 @@
 
     @include normal-font(21px, 26px, bold);
   }
+
+  .features__number {
+    margin-bottom: 20px;
+  }
+
+  .features__text {
+    padding: 0 20px;
+  }
 }
 
 @media (min-width: $desktop-width) {
   .features {
     width: $desktop-width;
+  }
+
+  .features__title {
+    padding-bottom: 65px;
+  }
+
+  .features__head {
+    padding: 0 90px;
   }
 }

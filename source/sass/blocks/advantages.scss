@@ -1,6 +1,7 @@
 .advantages {
   width: $mobile-width;
   margin: 0 auto;
+  margin-bottom: 40px;
 }
 
 .advantages__stats {
@@ -9,7 +10,7 @@
 }
 
 .advantages__wrapper {
-  padding: 35px 25px 40px;
+  padding: 30px 20px 40px;
   text-align: center;
   color: $white;
   background-color: $bg-blue;
@@ -37,7 +38,6 @@
 .advantages__slider {
   display: flex;
   flex-direction: column;
-  padding: 0 20px;
 
   @include list;
 }
@@ -45,6 +45,9 @@
 .advantages__list {
   display: flex;
   flex-direction: column;
+  margin-top: 1px;
+  margin-left: 20px;
+  padding-right: 20px;
 }
 
 .advantages__title {
@@ -91,28 +94,37 @@
     align-items: flex-start;
   }
 
-  .advantages__stats img {
-    width: 67%;
-    height: 260px;
-  }
-
   .advantages__wrapper {
-    width: 33%;
-    min-height: 260px;
-    padding: 40px 45px;
+    width: 256px;
+    min-height: 256px;
+    padding: 45px;
   }
 
   .advantages__head {
     @include normal-font(21px, 26px, bold);
   }
 
+  .advantages__number {
+    margin-bottom: 20px;
+  }
+
+  .advantages__image {
+    width: 512px;
+    height: 256px;
+    vertical-align: bottom;
+  }
+
   .advantages__slider {
     flex-direction: row;
+    justify-content: space-between;
+
+    @include list;
   }
 
   .advantages__list {
     width: 33%;
-    padding: 0 20px;
+    margin: 0;
+    padding: 0 45px;
     text-align: center;
   }
 
@@ -125,43 +137,74 @@
   }
 
   .advantages__title {
-    padding-top: 110px;
+    @include center-mp;
+    margin-bottom: 22px;
+    padding-top: 157px;
+
+    @include normal-font(21px, 26px, bold);
   }
 
   .advantages__title--house {
-    background-size: 70px 75px;
-    background-position: 95px 30px;
+    background-size: 80px 75px;
+    background-position: 42px 58px;
   }
 
   .advantages__title--souvenir {
-    background-size: 80px 70px;
-    background-position: 95px 30px;
+    background-size: 85px 75px;
+    background-position: 38px 55px;
   }
 
   .advantages__title--food {
-    background-size: 70px 75px;
-    background-position: 95px 30px;
+    background-size: 80px 70px;
+    background-position: 41px 60px;
+  }
+
+  .advantages__intro {
+    margin: 0;
+    text-align: center;
   }
 }
 
 @media (min-width: $desktop-width) {
   .advantages {
     width: $desktop-width;
+    margin-bottom: 83px;
+  }
+
+  .advantages__wrapper {
+    width: 400px;
+    padding-top: 50px;
+  }
+
+  .advantages__head {
+    padding: 0 50px;
+  }
+
+  .advantages__item {
+    padding: 0 10px;
+  }
+
+  .advantages__image {
+    width: 800px;
   }
 
   .advantages__title--house {
-    background-position: 127px 30px;
+    background-position: 103px 58px;
   }
 
   .advantages__title--souvenir {
-    background-position: 120px 30px;
+    background-position: 86px 56px;
   }
 
   .advantages__title--food {
-    background-position: 125px 30px;
+    background-position: 102px 62px;
   }
 
   .advantages__list {
-    padding: 0 60px;
+    padding: 0 56px;
+  }
+
+  .advantages__list--break {
+    padding: 0 65px;
   }
 }

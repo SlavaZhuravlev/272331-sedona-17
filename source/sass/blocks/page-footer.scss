@@ -20,7 +20,7 @@
   justify-content: space-between;
   width: 153px;
   margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 42px;
   padding: 0;
   list-style: none;
 }
@@ -90,8 +90,24 @@
     padding: 0 60px;
   }
 
+  .page-footer__visit {
+    margin-top: 10px;
+  }
+
+  .page-footer__list {
+    align-self: flex-start;
+  }
+
   .page-footer__copyright {
     margin: 0;
+  }
+
+  .copyright__text {
+    margin-top: 10px;
+  }
+
+  .copyright__link {
+    margin-top: 10px;
   }
 }
 

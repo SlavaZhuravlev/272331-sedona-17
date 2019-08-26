@@ -12,3 +12,26 @@ navToggle.addEventListener('click', function() {
     navMain.classList.remove('main-nav--opened');
   }
 });
+
+var sendLink = document.querySelector('.form-emotions__btn--send');
+var sendPopup = document.querySelector('.modal-review');
+var sendClose = sendPopup.querySelector('.modal-review__exit');
+
+sendLink.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  sendPopup.classList.add('modal-show');
+});
+
+sendClose.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  sendPopup.classList.remove('modal-show');
+});
+
+window.addEventListener('keydown', function (evt) {
+  if (evt.keyCode === 27) {
+    if (sendPopup.classList.contains('modal-show')) {
+      evt.preventDefault();
+      sendPopup.classList.remove('modal-show');
+    }
+  }
+});
