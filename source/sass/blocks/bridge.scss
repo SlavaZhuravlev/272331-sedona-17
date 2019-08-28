@@ -36,11 +36,12 @@
   .bridge {
     flex-direction: row;
     width: $tablet-width;
+    height: 256px;
   }
 
   .bridge__image {
     width: 512px;
-    height: 256px;
+    height: auto;
     vertical-align: bottom;
   }
 
@@ -82,5 +83,6 @@
 
   .bridge__image {
     width: 800px;
+    height: 256px;
   }
 }

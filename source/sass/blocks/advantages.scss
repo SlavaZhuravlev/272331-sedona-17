@@ -92,6 +92,7 @@
   .advantages__stats {
     flex-direction: row;
     align-items: flex-start;
+    height: 256px;
   }
 
   .advantages__wrapper {
@@ -110,7 +111,7 @@
 
   .advantages__image {
     width: 512px;
-    height: 256px;
+    height: auto;
     vertical-align: bottom;
   }
 
@@ -186,6 +187,7 @@
 
   .advantages__image {
     width: 800px;
+    height: 256px;
   }
 
   .advantages__title--house {
