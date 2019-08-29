@@ -9,7 +9,7 @@
 
 .page-footer__visit {
   display: block;
-  margin-bottom: 35px;
+  margin-bottom: 36px;
 
   @include normal-font(21px, 26px, bold);
   color: $black;
@@ -18,9 +18,9 @@
 .page-footer__list {
   display: flex;
   justify-content: space-between;
-  width: 153px;
+  width: 150px;
   margin: 0 auto;
-  margin-bottom: 42px;
+  margin-bottom: 40px;
   padding: 0;
   list-style: none;
 }
@@ -29,8 +29,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 46px;
+  height: 48px;
   background-color: $bg-blue;
 
   &:hover,
@@ -41,6 +41,18 @@
   &:active {
     background-color: #5496bd;
   }
+}
+
+.page-footer__link--twitter {
+  padding-top: 6px;
+}
+
+.page-footer__link--facebook {
+  padding-left: 10px;
+}
+
+.page-footer__link--youtube {
+  padding-top: 7px;
 }
 
 .page-footer__link svg {

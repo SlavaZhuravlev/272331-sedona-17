@@ -68,9 +68,13 @@
 
 .photo__item {
   margin: 0 auto;
-  padding-top: 15px;
-  padding-bottom: 20px;
+  padding-top: 16px;
+  padding-bottom: 22px;
   border-bottom: 2px solid #e5e5e5;
+}
+
+.photo__item img {
+  vertical-align: bottom;
 }
 
 .photo__wrapper {
@@ -80,7 +84,7 @@
 
 .photo__caption {
   margin: 0;
-  margin-top: 13px;
+  margin-top: 18px;
 
   @include normal-font(14px, 24px, bold);
   color: $black;
@@ -95,23 +99,19 @@
   color: $dark;
 }
 
-.photo__like {
+.photo__amount {
   position: relative;
   margin: 0;
   padding-top: 3px;
-  padding-left: 35px;
+  margin-top: -22px;
+  margin-left: 35px;
 
   @include normal-font(14px, 24px, bold);
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 22px;
-    height: 20px;
-    background: url("../img/icon-like.svg") no-repeat 0 0;
-  }
+.photo__like {
+  width: 22px;
+  height: 20px;
 }
 
 @media (min-width: $tablet-width) {
@@ -172,7 +172,6 @@
   .photo__item img {
     width: 324px;
     height: 267px;
-    vertical-align: bottom;
   }
 
   .photo__item .photo__sunset {

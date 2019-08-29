@@ -7,7 +7,7 @@
 }
 
 .bridge__stats {
-  padding: 30px 25px 25px;
+  padding: 40px 25px 38px;
   color: $white;
   background-color: $bg-blue;
 }
@@ -32,6 +32,10 @@
   @include normal-font (14px, 21px);
 }
 
+.bridge__image {
+  vertical-align: bottom;
+}
+
 @media (min-width: $tablet-width) {
   .bridge {
     flex-direction: row;
@@ -42,7 +46,6 @@
   .bridge__image {
     width: 512px;
     height: auto;
-    vertical-align: bottom;
   }
 
   .bridge__stats {

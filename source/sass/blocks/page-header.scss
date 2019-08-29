@@ -2,6 +2,8 @@
   display: flex;
   flex-direction: column;
   text-align: center;
+  width: $mobile-width;
+  margin: 0 auto;
 }
 
 .page-header__logo {
@@ -118,6 +120,10 @@
 }
 
 @media (min-width: $tablet-width) {
+  .page-header {
+    width: $tablet-width;
+  }
+
   .main-nav {
     width: $tablet-width;
     background-color: $white;
@@ -187,6 +193,10 @@
 }
 
 @media (min-width: $desktop-width) {
+  .page-header {
+    width: $desktop-width;
+  }
+
   .main-nav {
     width: $desktop-width;
   }
