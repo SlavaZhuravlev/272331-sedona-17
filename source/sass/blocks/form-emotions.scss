@@ -29,6 +29,10 @@
   text-transform: none;
 }
 
+.form-emotions__write textarea:focus::placeholder {
+  color: transparent;
+}
+
 .form-emotions__btn {
   display: block;
   width: 280px;

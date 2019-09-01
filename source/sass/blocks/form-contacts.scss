@@ -40,7 +40,7 @@
 .form-contacts__item input {
   width: 280px;
   margin: 0;
-  padding-top: 14px;
+  padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 20px;
 
@@ -53,6 +53,10 @@
 
 .form-contacts__item input::placeholder {
   color: $black;
+}
+
+.form-contacts__item input:focus::placeholder {
+  color: transparent;
 }
 
 .form-contacts__phone::after {
