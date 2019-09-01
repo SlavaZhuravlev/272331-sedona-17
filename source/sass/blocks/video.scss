@@ -75,17 +75,7 @@
   display: block;
   background: none;
   border: none;
-  fill: #5c6870;
   cursor: pointer;
-
-  &:hover,
-  &:focus {
-    fill: $dark;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 
   &--replay {
     left: 20px;
@@ -97,6 +87,21 @@
 
   &--fullscreen {
     left: 231px;
+  }
+}
+
+.video__button svg {
+  width: 32px;
+  height: 25px;
+  fill: #5c6870;
+
+  &:hover,
+  &:focus {
+    fill: $dark;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -146,16 +151,6 @@
 
   .video__button {
     top: 34px;
-    fill: $white;
-
-    &:hover,
-    &:focus {
-      fill: #c2c2c2;
-    }
-
-    &:active {
-      opacity: 0.3;
-    }
 
     &--replay {
       left: 30px;
@@ -167,6 +162,19 @@
 
     &--fullscreen {
       left: 581px;
+    }
+  }
+
+  .video__button svg {
+    fill: $white;
+
+    &:hover,
+    &:focus {
+      fill: #c2c2c2;
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }
